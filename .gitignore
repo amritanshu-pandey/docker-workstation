@@ -1,0 +1,2 @@
+copy-to-home-in-container/*
+!copy-to-home-in-container/.keep
