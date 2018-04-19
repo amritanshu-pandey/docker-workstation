@@ -6,7 +6,7 @@ A docker image to setup a Python and Node development environment quickly.
 - Support for pre-populating home directory, if image is built using dockerfile
 - Support for executing a bootstrap script, if image is built using dockerfile
 
-# Useful applications invluded with image:
+# Useful applications included with image:
 - pyenv
 - nodenv
 - openssh-server
