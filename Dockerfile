@@ -1,8 +1,8 @@
-FROM ubuntu:latest
+FROM ubuntu:rolling
 LABEL maintainer='amritanshu16@outlook.com'
 RUN apt update -y && apt upgrade -y
 RUN apt install -y \
-    build-essential curl git nano screenfetch openvpn openssh-server python3 sudo tree shellcheck vim wget zsh \
+    build-essential curl git nano neofetch openvpn openssh-server python3 sudo tree shellcheck vim wget zsh \
     make build-essential libssl-dev zlib1g-dev libbz2-dev \
     libreadline-dev libsqlite3-dev llvm libncurses5-dev libncursesw5-dev \
     xz-utils tk-dev
@@ -26,7 +26,7 @@ RUN git clone https://github.com/nodenv/nodenv.git ~/.nodenv
 RUN cd ~/.nodenv && src/configure && make -C src && cd ~
 RUN echo 'export PATH="$HOME/.nodenv/bin:$PATH"' >> ~/.zshrc
 RUN git clone https://github.com/nodenv/node-build.git $($HOME/.nodenv/bin/nodenv root)/plugins/node-build
-RUN echo "\nscreenfetch\n" >> /home/xps/.zshrc
+RUN echo "\nneofetch\n" >> /home/xps/.zshrc
 ADD bootstrap.sh /home/xps/bootstrap.sh
 RUN sudo chmod +x bootstrap.sh
 RUN bash /home/xps/bootstrap.sh

@@ -1,5 +1,5 @@
 # Docker-Workstation
-A docker image to setup a Python and Node development environment quickly.  
+A docker image to setup a Python and Node development environment quickly.
 
 # Features
 - Based on Ubuntu 17.10
@@ -23,7 +23,7 @@ A docker image to setup a Python and Node development environment quickly.
 4. build docker image using following command:
     ```bash
     docker build -t <image_name>:<tag> .
-    ```  
+    ```
 
 # How to start the docker container
 ## Creating a new saved volume
