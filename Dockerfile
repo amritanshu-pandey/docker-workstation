@@ -27,9 +27,11 @@ ENV PATH $PYENV_ROOT/shims:$PYENV_ROOT/bin:$PATH
 RUN git clone https://github.com/nodenv/nodenv.git ~/.nodenv
 RUN cd ~/.nodenv && src/configure && make -C src && cd ~
 RUN echo 'export PATH="$HOME/.nodenv/bin:$PATH"' >> ~/.zshrc
+RUN echo 'export PATH="$HOME/.nodenv/shims/"' >> ~/.zshrc
 RUN git clone https://github.com/nodenv/node-build.git $($HOME/.nodenv/bin/nodenv root)/plugins/node-build
 RUN echo "\nneofetch\n" >> /home/xps/.zshrc
 ADD bootstrap.sh /home/xps/bootstrap.sh
 RUN sudo chmod +x bootstrap.sh
 RUN bash /home/xps/bootstrap.sh
 CMD echo 'Execute /bin/zsh while instantiating the container \ndocker run -it <image> /bin/zsh'
+
