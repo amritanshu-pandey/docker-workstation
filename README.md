@@ -1,12 +1,12 @@
 # Docker-Workstation
-A docker image to setup a Python and Node development environment quickly.  
+A docker image to setup a Python and Node development environment quickly.
 
 # Features
 - Based on Ubuntu 17.10
 - Support for pre-populating home directory, if image is built using dockerfile
 - Support for executing a bootstrap script, if image is built using dockerfile
 
-# Useful applications invluded with image:
+# Useful applications included with image:
 - pyenv
 - nodenv
 - openssh-server
@@ -23,7 +23,7 @@ A docker image to setup a Python and Node development environment quickly.
 4. build docker image using following command:
     ```bash
     docker build -t <image_name>:<tag> .
-    ```  
+    ```
 
 # How to start the docker container
 ## Creating a new saved volume
